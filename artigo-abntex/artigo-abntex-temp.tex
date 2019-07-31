@@ -1,0 +1,67 @@
+%% Este pequeno template te ajuda a compilar um artigo simples.
+%% É uma versão mínima do modelo canônico de artigo científico do AbnTeX.
+%% Mais informações veja o site: https://www.abntex.net.br/
+
+%% Testamos em Linux, Mac OSX e Windows em Julho de 2019.
+
+\documentclass[
+	article,
+	12pt,
+	oneside,
+	a4paper,
+	english,
+	brazil
+	]{abntex2}
+
+\usepackage[brazil]{babel}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+
+\hypersetup{
+  		colorlinks=true,
+    	citecolor=black       % cor da citação.
+}
+
+\titulo{Seu título}
+\tituloestrangeiro{}       % NÃO REMOVA. Usar abntex2 como artigo requer que o título
+                             % estrangeiro seja utilizado. Mantenha vazio ou adicione o título em inglês.
+\autor{Seu Nome}
+
+
+
+\begin{document}
+\maketitle
+
+
+
+\begin{resumoumacoluna}
+ Comece seu resumo... \\
+ 
+ \textbf{Palavras-chave}: latex. \abnTeX. editoração de texto.
+\end{resumoumacoluna}
+
+
+\section{Introdução}
+
+
+A maior vantagem do \abnTeX é as citações no formato da abnt. Por exemplo, a literatura entende que isso salvou a vida dos estudantes universitários \cite{Abreu1999}.
+
+\section{Revisão de Literatura}
+Segundo \citeonline{Abreu1999} isso vai te fazer publicar Qualis A. Não use citação direta, mas
+
+\begin{citacao}
+A maior vantagem do \abnTeX é as citações no formato da abnt. Por exemplo, a literatura entende que isso salvou a vida dos estudantes universitários \cite{Abreu1999}
+\end{citacao}
+
+
+\section{Resultados}
+
+\bibliography{referencias}
+
+\end{document}
